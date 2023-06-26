@@ -45,12 +45,22 @@ def encontrarPoligono(imagem):
             text_x = x + int((_ - text_width) / 2)
             text_y = y + 30 + int((text_height + 10) / 2)
             cv2.putText(imagem, forma, (250, height - 50), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
-
+            play_sound() #Emitir som (bip)
 
     return imagem
 
+def play_sound():
+    pygame.mixer.init()
+    pygame.mixer.music.load('beep.wav')
+    pygame.mixer.music.play()
+
+def reproduzir_som():
+    play_sound()
+
 #Conectar openCV à WebCam do PC
 webcam = cv2.VideoCapture(0) #0 É a câmera padrão do computador
+
+forma_encontrada = False  # Variável para indicar se uma forma foi encontrada
 
 while True:
     validacao, frame = webcam.read() # pegar a informação da webcam
@@ -64,6 +74,11 @@ while True:
     key = cv2.waitKey(1) #Faz a imagem esperar em ms e armazena a tecla que estamos apertando.
     if key == 27:
         break  #27 é a tecla ESC
+
+    # Verificar se uma forma foi encontrada e reproduzir o som
+    if forma_encontrada:
+        play_sound()
+        forma_encontrada = False  # Redefinir a variável para False
 
 
 webcam.release() # Finaliza  a conexão com a WebCam
