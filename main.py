@@ -14,7 +14,7 @@ def encontrarForma(contorno):
     elif lados == 4:
         return 'Retangulo'
     elif lados > 4:
-        return 'Círculo'
+        return 'Circulo'
     else:
         return 'Desconhecido'
     

@@ -3,8 +3,7 @@
 ![gif](/midia/video_saida.gif)
 
 ## 2 - Do que se trata
-Este projeto, trata-se de uma aplicação que através da webcam conectada em seu computador (seja ela webcam interna ou externa), possibilite em tempo real, a identificação das formas geométricas, retângulo, círculo e triângulo.
-E além disso, seja visivel na parte inferior da tela o nome da forma, e avise o usuário com um sinal sonoro, quando a forma for reconhecida.
+Este projeto trata-se de uma aplicação que, por meio da webcam conectada ao seu computador (seja ela interna ou externa), possibilita a identificação em tempo real das formas geométricas: retângulo, círculo e triângulo. Além disso, o nome da forma será exibido na parte inferior da tela e o usuário será notificado por um sinal sonoro quando a forma for reconhecida.
 
 ## 3 - Tecnologia utilizadas
 * Python 3.10.0
